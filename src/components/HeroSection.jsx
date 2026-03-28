@@ -22,7 +22,10 @@ const HeroSection = () => {
             {/* Your Content/Components */}
             <header className='pt-46 flex justify-between gap-10 mx-10 px-20 relative z-50'>
                 <section className='text-white flex flex-col gap-5 w-1/2'>
-                    <h5 className='text-lg text-(--color-primary-light)'>M Aun</h5>
+                    <div>
+                        <h5 className='text-lg text-(--color-primary-light)'>M Aun</h5>
+                        <div className="h-px w-20 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
+                    </div>
                     <h1 className='font-bold text-7xl uppercase'>Professional <br /> video editor</h1>
                     <h5>Making your videos look more cool.</h5>
                     <button className='bg-(--color-primary) px-10 py-2 text-xl font-semibold w-fit hover:bg-(--color-primary-light) transition-colors ease-linear duration-300 cursor-pointer'>Let's Talk</button>
