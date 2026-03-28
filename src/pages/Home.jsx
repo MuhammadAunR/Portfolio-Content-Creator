@@ -3,12 +3,13 @@ import ContactUs from "../components/ContactUs"
 import HeroSection from "../components/HeroSection"
 import Projects from "../components/Projects"
 import Testimonials from "../components/Testimonials"
-
+import Navbar from '../components/Navbar'
 
 const Home = () => {
     return (
         <>
-            <main>
+            <main className="max-w-384 mx-auto">
+                <Navbar />
                 <HeroSection />
                 <AboutMe />
                 <Projects />

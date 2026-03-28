@@ -3,7 +3,7 @@ import React from 'react'
 const AboutMe = () => {
     return (
         <>
-            <section className='min-h-120 h-fit py-20 bg-black/95 flex flex-col gap-5 items-center justify-center'>
+            <section id='about' className='min-h-120 h-fit py-20 bg-black/95 flex flex-col gap-5 items-center justify-center'>
                 <div className='pb-7'>
                     <h2 className='font-bold text-5xl uppercase'>About Me</h2>
                     <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>

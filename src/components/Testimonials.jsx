@@ -31,7 +31,7 @@ const Testimonials = () => {
 
                 <div className='flex gap-5 items-center justify-center my-7'>
                     {testimonials.map((test, i) => {
-                        return <div className='w-100 min-h-100 h-fit bg-(--color-primary) flex flex-col items-center justify-center gap-3 p-7'>
+                        return <div key={i} className='w-100 min-h-100 h-fit bg-(--color-primary) flex flex-col items-center justify-center gap-3 p-7'>
                             <span className=''><Quote color='yellow' /></span>
                             <p className='text-center'>{test.review}</p>
                             <img src={test.img} alt={test.name} className='w-15 rounded-full' />

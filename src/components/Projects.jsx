@@ -12,7 +12,7 @@ const Projects = () => {
     ];
     return (
         <>
-            <div className="min-h-fit w-full bg-black relative">
+            <div id='portfolio' className="min-h-fit w-full bg-black relative">
                 <div
                     className="absolute inset-0 z-0"
                     style={{
