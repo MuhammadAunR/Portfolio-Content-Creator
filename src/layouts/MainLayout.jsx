@@ -1,6 +1,7 @@
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom'
+import ContextWrapper from '../components/ContextWrapper';
 
 const MainLayout = () => {
     useEffect(() => {
@@ -26,7 +27,9 @@ const MainLayout = () => {
     }, []);
     return (
         <>
-            <Outlet />
+            <ContextWrapper>
+                <Outlet />
+            </ContextWrapper>
         </>
     )
 }
