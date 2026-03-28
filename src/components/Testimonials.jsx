@@ -19,25 +19,29 @@ const Testimonials = () => {
             img: reviewImg,
         },
     ];
-    return (
-        <section className='h-fit py-20 bg-black'>
-            <div className='flex flex-col items-center space-y-5'>
-                <h2 className='font-bold text-5xl uppercase'>About Me</h2>
-                <div className="h-px w-1/4 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
-            </div>
-            <h3 className='text-center text-2xl py-3'>What our clients says about us.</h3>
 
-            <div className='flex gap-5 items-center justify-center my-7'>
-                {testimonials.map((test, i) => {
-                    return <div className='w-100 min-h-100 h-fit bg-(--color-primary) flex flex-col items-center justify-center gap-3 p-7'>
-                        <span className=''><Quote color='yellow' /></span>
-                        <p className='text-center'>{test.review}</p>
-                        <img src={test.img} alt={test.name} className='w-15 rounded-full'/>
-                        <h6>{test.name}</h6>
-                    </div>
-                })}
-            </div>
-        </section>
+    return (
+        <>
+            <section className='h-fit py-20 bg-black'>
+                <div className='flex flex-col items-center space-y-5'>
+                    <h2 className='font-bold text-5xl uppercase'>Testimonials</h2>
+                    <div className="h-px w-1/4 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
+                </div>
+                <h3 className='text-center text-2xl py-3'>What our clients says about us.</h3>
+
+                <div className='flex gap-5 items-center justify-center my-7'>
+                    {testimonials.map((test, i) => {
+                        return <div className='w-100 min-h-100 h-fit bg-(--color-primary) flex flex-col items-center justify-center gap-3 p-7'>
+                            <span className=''><Quote color='yellow' /></span>
+                            <p className='text-center'>{test.review}</p>
+                            <img src={test.img} alt={test.name} className='w-15 rounded-full' />
+                            <h6>{test.name}</h6>
+                        </div>
+                    })}
+                </div>
+            </section>
+            <div className="h-10 w-full bg-linear-to-r from-red-800 via-yellow-800 via-green-800 via-blue-800 via-indigo-800 to-purple-800"></div>
+        </>
     )
 }
 

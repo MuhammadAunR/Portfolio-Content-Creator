@@ -32,10 +32,10 @@ const AboutMe = () => {
                         <div className="h-px w-1/4 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                     </div>
                     <ul className='flex gap-5 items-center justify-center'>
-                        <li>   <img src="https://skillicons.dev/icons?i=ae" /></li>
-                        <li>   <img src="https://skillicons.dev/icons?i=ps" /></li>
-                        <li>   <img src="https://skillicons.dev/icons?i=pr" /></li>
-                        <li>   <img src="https://skillicons.dev/icons?i=xd" /></li>
+                        <li className='hover:scale-110 transition-transform ease-linear duration-300'>   <img src="https://skillicons.dev/icons?i=ae" /></li>
+                        <li className='hover:scale-110 transition-transform ease-linear duration-300'>   <img src="https://skillicons.dev/icons?i=ps" /></li>
+                        <li className='hover:scale-110 transition-transform ease-linear duration-300'>   <img src="https://skillicons.dev/icons?i=pr" /></li>
+                        <li className='hover:scale-110 transition-transform ease-linear duration-300'>   <img src="https://skillicons.dev/icons?i=xd" /></li>
                     </ul>
                 </div>
 

@@ -24,10 +24,13 @@ const Navbar = () => {
             </ul>
 
             <ul className='flex items-center gap-3'>
-                <Link className='hover:text-(--color-primary-light) transition-colors ease-linear duration-300'>
+                <Link
+                    href="https://wa.me/923286536520?text=Hi%20I%20want%20to%20consult%20with%20you"
+                    target='_blank'
+                    className='hover:text-(--color-primary-light) transition-colors ease-linear duration-300'>
                     <li>
                         <svg
-                        fill='currentColor'
+                            fill='currentColor'
                             xmlns="http://www.w3.org/2000/svg"
                             width="32" height="32"
                             viewBox="0 0 32 32">
