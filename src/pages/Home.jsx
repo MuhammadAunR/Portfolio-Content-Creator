@@ -1,11 +1,16 @@
-import React from 'react'
+import AboutMe from "../components/AboutMe"
+import HeroSection from "../components/HeroSection"
+
 
 const Home = () => {
-  return (
-    <div>
-      Hey
-    </div>
-  )
+    return (
+        <>
+            <main>
+                <HeroSection />
+                <AboutMe />
+            </main>
+        </>
+    )
 }
 
 export default Home
