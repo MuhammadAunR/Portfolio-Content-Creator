@@ -41,7 +41,7 @@ const HeroSection = () => {
         });
     };
     return (
-        <div id='home' className="min-h-scree w-full relative bg-black">
+        <div id='home' className="min-h-fit w-full relative bg-black">
             {scrollToTop && <span
                 onClick={(e) => handleScroll(e, "home")} className='fixed bottom-7 right-7 z-1000 bg-(--color-primary) rounded-sm hover:bg-(--color-primary-light) transition-colors ease-linear duration-300'>
                 <ChevronsUp size={36} />
@@ -60,26 +60,26 @@ const HeroSection = () => {
                 }}
             />
             {/* Your Content/Components */}
-            <header className='pt-46 flex justify-between gap-10 mx-10 px-20 relative z-50'>
-                <section className='text-white flex flex-col gap-5 w-1/2'>
+            <header className='pt-46 flex justify-between max-xl:items-center max-xl:flex-col gap-10 px-10 relative z-50'>
+                <section className='text-white flex flex-col gap-5 xl:w-1/2'>
                     <div>
                         <h5 className='text-lg text-(--color-primary-light)'>M Aun</h5>
                         <div className="h-px w-20 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                     </div>
-                    <h1 className='font-bold text-7xl uppercase'>Professional <br /> video editor</h1>
+                    <h1 className='font-bold text-7xl uppercase'>Professional <br className='max-xl:hidden'/> video editor</h1>
                     <h5>Making your videos look more cool.</h5>
                     <button onClick={(e) => handleScroll(e, "contact")} className='bg-(--color-primary) px-10 py-2 text-xl font-semibold w-fit hover:bg-(--color-primary-light) transition-colors ease-linear duration-300 cursor-pointer'>Let's Talk</button>
                 </section>
                 <section className='flex justify-center relative w-1/2'>
-                    <div className='w-100'>
+                    <div className='max-lg:w-80 w-100'>
                         <img
                             src={heroImage}
                             alt="Hero Section Image"
-                            className='w-100' />
-                        <img src={currentImageLeft} alt="" className='absolute -left-20 bottom-0 -z-10' />
-                        <img src={currentImageRight} alt="" className='absolute -right-20 bottom-0 -z-10' />
-                        <img src={heroAdobeImg} alt="" className='absolute -left-10 top-10 -z-10' />
-                        <img src={heroPremImg} alt="" className='absolute -right-10 top-12 -z-10' />
+                            className='max-lg:w-80 w-100' />
+                        <img src={currentImageLeft} alt="" className='absolute -left-10 bottom-0 -z-10 max-xl:w-50 max-lg:-left-20' />
+                        <img src={currentImageRight} alt="" className='absolute -right-10 bottom-0 -z-10 max-xl:w-50 max-lg:-right-20' />
+                        <img src={heroAdobeImg} alt="" className='absolute -left-5 top-10 -z-10 max-lg:-left-20' />
+                        <img src={heroPremImg} alt="" className='absolute -right-10 top-12 -z-10 max-lg:-right-30 max-lg:w-30' />
                     </div>
                 </section>
             </header>
