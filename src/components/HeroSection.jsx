@@ -3,8 +3,33 @@ import currentImageLeft from '../assets/hero-current-left.png'
 import currentImageRight from '../assets/hero-current-right.png'
 import heroAdobeImg from '../assets/hero-ae.png'
 import heroPremImg from '../assets/hero-pr.png'
+import { ChevronsUp } from 'lucide-react'
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+    const [scrollToTop, setScrollToTop] = useState(false)
+
+
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScrollToTop = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setScrollToTop(true);
+            } else {
+                setScrollToTop(false);
+            }
+
+            lastScrollY = currentScrollY;
+        };
+
+        window.addEventListener("scroll", handleScrollToTop);
+
+        return () => window.removeEventListener("scroll", handleScrollToTop);
+    }, []);
+
     const handleScroll = (e, target) => {
         e.preventDefault();
 
@@ -17,6 +42,11 @@ const HeroSection = () => {
     };
     return (
         <div id='home' className="min-h-scree w-full relative bg-black">
+            {scrollToTop && <span
+                onClick={(e) => handleScroll(e, "home")} className='fixed bottom-7 right-7 z-1000 bg-(--color-primary) rounded-sm hover:bg-(--color-primary-light) transition-colors ease-linear duration-300'>
+                <ChevronsUp size={36} />
+            </span>
+            }
             <div
                 className="absolute inset-0 z-0"
                 style={{
@@ -53,7 +83,7 @@ const HeroSection = () => {
                     </div>
                 </section>
             </header>
-        </div>
+        </div >
 
     )
 }
