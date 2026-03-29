@@ -23,13 +23,13 @@ const Testimonials = () => {
     return (
         <>
             <section className='h-fit py-20 bg-black'>
-                <div className='flex flex-col items-center space-y-5'>
+                <div className='flex flex-col items-center'>
                     <h2 className='font-bold text-5xl uppercase'>Testimonials</h2>
-                    <div className="h-px w-1/4 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
+                    <div className="h-px w-1/2 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                 </div>
-                <h3 className='text-center text-2xl py-3'>What our clients says about us.</h3>
+                <h3 className='text-center text-2xl py-7'>What our clients says about us.</h3>
 
-                <div className='flex gap-5 items-center justify-center my-7'>
+                <div className='flex gap-5 items-center justify-center my-7 flex-wrap px-5'>
                     {testimonials.map((test, i) => {
                         return <div key={i} className='w-100 min-h-100 h-fit bg-(--color-primary) flex flex-col items-center justify-center gap-3 p-7'>
                             <span className=''><Quote color='yellow' /></span>
