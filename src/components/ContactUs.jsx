@@ -9,13 +9,13 @@ const ContactUs = () => {
 
     return (
         <>
-            <footer id="contact" className='bg-black pt-20 px-10'>
-                <div className='flex flex-col justify-start space-y-5'>
-                    <h2 className='font-bold text-5xl uppercase'>I am ready to consult you</h2>
-                    <div className="h-px w-full md:w-1/2 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
+            <footer id="contact" className='bg-black pt-20 px-5 md:px-10'>
+                <div className='flex flex-col justify-start w-fit'>
+                    <h2 className='font-bold max-md:text-3xl text-5xl uppercase'>I am ready to consult you</h2>
+                    <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                 </div>
                 <div className='flex flex-col gap-5 py-7'>
-                    <h5 className='text-xl'>“Ready to turn your ideas into cinematic visuals? Let's chat on WhatsApp.”</h5>
+                    <h5 className='md:text-xl'>“Ready to turn your ideas into cinematic visuals? Let's chat on WhatsApp.”</h5>
 
                     <button onClick={handleWhatsappRedirect} className='bg-(--color-primary) hover:bg-(--color-primary-light) transition-colors ease-linear duration-300 flex items-center gap-2 py-2 px-7 w-fit cursor-pointer'>
                         <span className='font-semibold text-xl'>Whatsapp</span>

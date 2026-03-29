@@ -4,17 +4,17 @@ const AboutMe = () => {
     return (
         <>
             <section id='about' className='min-h-120 h-fit py-20 bg-black/95 flex flex-col gap-5 items-center justify-center'>
-                <div className='pb-7'>
-                    <h2 className='font-bold text-5xl uppercase'>About Me</h2>
+                <div className='pb-5 w-fit'>
+                    <h2 className='font-bold max-md:text-3xl text-5xl uppercase'>About Me</h2>
                     <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                 </div>
 
                 <p className='md:w-1/2 text-center px-5'>Welcome to the cinematic realm of Jimmy, where creativity meets technology to craft visually stunning narratives. With a passion for storytelling and a keen eye for detail, I embark on a journey to transform ordinary footage into extraordinary visual experiences.</p>
 
                 <div className='space-y-5'>
-                    <div className='flex flex-col items-center'>
+                    <div className='flex flex-col items-center justify-self-center w-fit'>
                         <h4 className='font-semibold text-2xl text-center'>Services</h4>
-                        <div className="h-px w-1/5 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
+                        <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                     </div>
                     <ul className='flex gap-5 items-center justify-center flex-wrap px-5'>
                         {["Cash Cow Editing", "Reels Editing", "Logo Animation", "Podcast Edit"].map((skill) => (
@@ -27,9 +27,9 @@ const AboutMe = () => {
                 </div>
 
                 <div className='space-y-5'>
-                    <div className='flex flex-col items-center'>
+                    <div className='flex flex-col items-center justify-self-center w-fit'>
                         <h4 className='font-semibold text-2xl text-center'>Tools</h4>
-                        <div className="h-px w-1/4 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
+                        <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                     </div>
                     <ul className='flex gap-5 items-center justify-center flex-wrap px-5'>
                         <li className='hover:scale-110 transition-transform ease-linear duration-300'>   <img src="https://skillicons.dev/icons?i=ae" /></li>

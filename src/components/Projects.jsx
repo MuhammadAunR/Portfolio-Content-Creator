@@ -26,10 +26,10 @@ const Projects = () => {
                         backgroundPosition: "0 0, 10px 10px, 15px 5px",
                     }}
                 />
-                <section className='relative z-50 mx-10 space-y-15 py-20'>
-                    <div className='flex flex-col items-center'>
-                        <h2 className='font-bold text-5xl uppercase'>My best edits</h2>
-                        <div className="h-px w-1/3 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
+                <section className='relative z-50 px-5 md:px-10 space-y-15 py-20'>
+                    <div className='flex flex-col items-center justify-self-center w-fit'>
+                        <h2 className='font-bold max-md:text-3xl text-5xl uppercase'>My best edits</h2>
+                        <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                     </div>
 
                     <div className='flex items-center justify-center gap-7 flex-wrap'>
