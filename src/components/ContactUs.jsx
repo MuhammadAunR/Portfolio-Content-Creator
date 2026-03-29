@@ -12,7 +12,7 @@ const ContactUs = () => {
             <footer id="contact" className='bg-black pt-20 px-10'>
                 <div className='flex flex-col justify-start space-y-5'>
                     <h2 className='font-bold text-5xl uppercase'>I am ready to consult you</h2>
-                    <div className="h-px w-1/2 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
+                    <div className="h-px w-full md:w-1/2 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                 </div>
                 <div className='flex flex-col gap-5 py-7'>
                     <h5 className='text-xl'>“Ready to turn your ideas into cinematic visuals? Let's chat on WhatsApp.”</h5>
@@ -30,7 +30,7 @@ const ContactUs = () => {
                     </button>
                 </div>
 
-                <section className="flex items-center gap-10 py-7">
+                <section className="flex items-center gap-10 py-7 flex-wrap px-5">
                     <div className="flex items-center gap-2">
                         <span className="text-(--color-primary)"><Phone /></span>
                         <span className="text-lg">+92-xxxxxxxxxx</span>
