@@ -2,6 +2,7 @@ import video1 from '../assets/p1.webm'
 import video2 from '../assets/p2.webm'
 import video3 from '../assets/p3.webm'
 import video4 from '../assets/p4.webm'
+import { motion } from "framer-motion"
 
 const Projects = () => {
     const videos = [
@@ -27,19 +28,29 @@ const Projects = () => {
                     }}
                 />
                 <section className='relative z-50 px-5 md:px-10 space-y-15 py-20'>
-                    <div className='flex flex-col items-center justify-self-center w-fit'>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.95, ease: 'easeOut' }}
+                        viewport={{ once: true }}
+                        className='flex flex-col items-center justify-self-center w-fit'>
                         <h2 className='font-bold max-md:text-3xl text-5xl uppercase'>My best edits</h2>
                         <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
-                    </div>
+                    </motion.div>
 
                     <div className='flex items-center justify-center gap-7 flex-wrap'>
                         {videos.map((video, index) => (
-                            <div key={index} className='flex flex-col gap-4 items-center'>
+                            <motion.div
+                                initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+                                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                transition={{ duration: index * 0.95, ease: 'easeOut' }}
+                                viewport={{ once: true }}
+                                key={index} className='flex flex-col gap-4 items-center'>
                                 <video controls muted loop autoPlay className='w-100 h-auto'>
                                     <source src={video.src} type="video/webm" />
                                 </video>
                                 <h4 className='text-2xl font-semibold uppercase'>{video.type}</h4>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </section>
