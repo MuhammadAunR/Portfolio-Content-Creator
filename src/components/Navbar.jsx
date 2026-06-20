@@ -1,11 +1,7 @@
 import { Menu } from 'lucide-react';
-import { useContext } from 'react';
 import { Link } from 'react-router-dom'
-import { ContextProvider } from './ContextWrapper';
 
 const Navbar = () => {
-
-    const { toggleDrawer } = useContext(ContextProvider)
 
     const handleScroll = (e, target) => {
         e.preventDefault();
@@ -17,10 +13,11 @@ const Navbar = () => {
             duration: 1.2,
         });
     };
+
     return (
         <>
             <nav className='flex items-center justify-between py-4 px-5 md:px-10 fixed top-0 w-full max-w-384 text-white z-1000'>
-                <div className="logo font-bold text-2xl lg:border border-white lg:bg-black/20 lg:backdrop-blur-3xl lg:rounded-full lg:py-2 lg:px-7">
+                <div className="logo font-bold text-2xl border border-white bg-black/20 backdrop-blur-3xl rounded-full py-2 px-7 max-lg:text-center max-lg:w-full">
                     <h2>VideoAlchemist</h2>
                 </div>
 
@@ -38,8 +35,6 @@ const Navbar = () => {
                         <li>Contact</li>
                     </a>
                 </ul>
-
-                <span onClick={toggleDrawer} className='lg:hidden' ><Menu /></span>
 
                 <ul className='flex items-center gap-3 max-lg:hidden border border-white bg-black/20 backdrop-blur-3xl rounded-full py-2 px-7'>
                     <Link
