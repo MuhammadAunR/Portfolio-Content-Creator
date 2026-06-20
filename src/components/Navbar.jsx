@@ -19,12 +19,12 @@ const Navbar = () => {
     };
     return (
         <>
-            <nav className='flex items-center justify-between py-4 px-5 md:px-10 fixed top-0 w-full max-w-384 bg-black/70 backdrop-blur-3xl text-white z-1000'>
-                <div className="logo font-bold text-2xl">
+            <nav className='flex items-center justify-between py-4 px-5 md:px-10 fixed top-0 w-full max-w-384 text-white z-1000'>
+                <div className="logo font-bold text-2xl lg:border border-white lg:bg-black/20 lg:backdrop-blur-3xl lg:rounded-full lg:py-2 lg:px-7">
                     <h2>VideoAlchemist</h2>
                 </div>
 
-                <ul className='flex items-center gap-10 bg-(--color-primary-light)/10 backdrop-blur-3xl rounded-full py-3 px-7 max-lg:hidden'>
+                <ul className='flex items-center gap-10 border border-white bg-black/20 backdrop-blur-3xl rounded-full py-3 px-7 max-lg:hidden'>
                     <a href='#home' onClick={(e) => handleScroll(e, "home")} className='text-lg hover:text-(--color-primary-light) transition-colors ease-linear'>
                         <li>Home</li>
                     </a>
@@ -41,7 +41,7 @@ const Navbar = () => {
 
                 <span onClick={toggleDrawer} className='lg:hidden' ><Menu /></span>
 
-                <ul className='flex items-center gap-3 max-lg:hidden'>
+                <ul className='flex items-center gap-3 max-lg:hidden border border-white bg-black/20 backdrop-blur-3xl rounded-full py-2 px-7'>
                     <Link
                         to="https://wa.me/923286536520?text=Hi%20I%20want%20to%20consult%20with%20you"
                         target='_blank'
