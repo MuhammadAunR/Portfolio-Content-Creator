@@ -9,3 +9,7 @@ body{
   font-family: "Share Tech", sans-serif;
   color: white;
 }
+
+html, body{
+  overflow: hidden;
+}
