@@ -5,6 +5,7 @@ import heroAdobeImg from '../assets/hero-ae.png'
 import heroPremImg from '../assets/hero-pr.png'
 import { ChevronsUp } from 'lucide-react'
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion"
 
 const HeroSection = () => {
     const [scrollToTop, setScrollToTop] = useState(false)
@@ -60,14 +61,20 @@ const HeroSection = () => {
                 }}
             />
             {/* Your Content/Components */}
-            <header className='pt-30 md:pt-46 flex justify-between max-xl:flex-col gap-10 px-5 md:px-10 relative z-50'>
-                <section className='text-white flex flex-col gap-5 xl:w-1/2'>
+            <motion.header
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.95, ease: 'linear' }}
+                viewport={{ once: true }}
+                className='pt-30 md:pt-46 flex items-center justify-between max-xl:flex-col gap-10 px-5 md:px-10 relative z-50'>
+                <section
+                    className='text-white flex flex-col gap-5 xl:w-1/2'>
                     <div className='w-fit'>
                         <h5 className='text-lg text-(--color-primary-light)'>M Aun</h5>
                         <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
                     </div>
-                    <h1 className='font-bold max-md:text-4xl max-lg:text-6xl text-7xl uppercase'>Professional <br className='max-xl:hidden'/> video editor</h1>
-                    <h5>Making your videos look more cool.</h5>
+                    <h1 className='font-bold max-md:text-4xl max-lg:text-6xl text-7xl uppercase'>Crafting <br className='max-xl:hidden' /> cinematic edits</h1>
+                    <h5>Sharper cuts, smoother transitions, better stories — let's make it happen</h5>
                     <button onClick={(e) => handleScroll(e, "contact")} className='bg-(--color-primary) px-10 py-2 text-xl font-semibold w-fit hover:bg-(--color-primary-light) transition-colors ease-linear duration-300 cursor-pointer'>Let's Talk</button>
                 </section>
                 <section className='flex justify-center place-self-center relative w-1/2'>
@@ -82,7 +89,7 @@ const HeroSection = () => {
                         <img src={heroPremImg} alt="" className='absolute -right-10 top-12 -z-10 max-lg:-right-30 max-lg:w-30' />
                     </div>
                 </section>
-            </header>
+            </motion.header>
         </div >
 
     )
