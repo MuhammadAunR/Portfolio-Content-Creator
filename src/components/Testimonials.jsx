@@ -1,5 +1,6 @@
 import { Quote } from 'lucide-react'
 import reviewImg from '../assets/testimonials.webp'
+import { motion } from "framer-motion"
 
 const Testimonials = () => {
     const testimonials = [
@@ -23,24 +24,39 @@ const Testimonials = () => {
     return (
         <>
             <section className='h-fit py-20 bg-black'>
-                <div className='flex flex-col items-center justify-self-center w-fit'>
+                <motion.div
+                    initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                    transition={{ duration: 0.95, ease: 'easeOut' }}
+                    viewport={{ once: true }}
+                    className='flex flex-col items-center justify-self-center w-fit'>
                     <h2 className='font-bold max-md:text-3xl text-5xl uppercase'>Testimonials</h2>
                     <div className="h-px w-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500"></div>
-                </div>
-                <h3 className='text-center text-xl md:text-2xl py-7'>What our clients says about us.</h3>
+                </motion.div>
+                <motion.h3
+                    initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                    transition={{ duration: 0.95, ease: 'easeOut' }}
+                    viewport={{ once: true }}
+                    className='text-center text-lg md:text-xl py-7'>What our clients says about us.</motion.h3>
 
                 <div className='flex gap-5 items-center justify-center my-7 flex-wrap px-5'>
-                    {testimonials.map((test, i) => {
-                        return <div key={i} className='w-100 min-h-100 h-fit bg-(--color-primary) flex flex-col items-center justify-center gap-3 p-7'>
+                    {testimonials.map((test, index) => {
+                        return <motion.div
+                            initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: index * 0.95, ease: 'easeOut' }}
+                            viewport={{ once: true }}
+                            key={index} className='w-100 min-h-100 h-fit bg-(--color-primary) flex flex-col items-center justify-center gap-3 p-7'>
                             <span className=''><Quote color='yellow' /></span>
                             <p className='text-center'>{test.review}</p>
                             <img src={test.img} alt={test.name} className='w-15 rounded-full' />
                             <h6>{test.name}</h6>
-                        </div>
+                        </motion.div>
                     })}
                 </div>
             </section>
-            <div className="h-10 w-full bg-linear-to-r from-red-800 via-yellow-800 via-green-800 via-blue-800 via-indigo-800 to-purple-800"></div>
+            <div className="h-1 w-full bg-linear-to-r from-red-800 via-yellow-800 via-green-800 via-blue-800 via-indigo-800 to-purple-800"></div>
         </>
     )
 }
